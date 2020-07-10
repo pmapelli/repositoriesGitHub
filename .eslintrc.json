@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "extends": [
     "plugin:react/recommended",
@@ -24,11 +25,16 @@
   },
   "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
   "rules": {
+    "react/jsx-props-no-spreading": "off",
+    "prettier/prettier": "error",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".tsx", ".js", ".jsx"] }
+    ],
     "import/prefer-default-export": "off",
-    "@typescript-eslint/explicity-function-return-type": [
+    "@typescript-eslint/explicit-function-return-type": [
       "error",
       {
         "allowExpressions": true
